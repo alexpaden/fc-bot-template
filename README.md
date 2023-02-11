@@ -21,3 +21,4 @@ This example starts a Farcaster bot using [farcaster-py](https://github.com/a16z
 
 - Install packages using `poetry install`
 - Start the bot using `poetry run python main.py`
+- Generate an access token using `python ./token_maker.py`
