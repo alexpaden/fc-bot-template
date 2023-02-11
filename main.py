@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 if __name__ == "__main__":
     load_dotenv()
-    fcc = MerkleApiClient(access_token=os.getenv("MERKLE_SECRET"))
+    fcc = MerkleApiClient(access_token=os.getenv("FARC_SECRET"))
     print(fcc.get_healthcheck())
 
     def handle_command(notif):
