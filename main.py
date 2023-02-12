@@ -39,7 +39,7 @@ if __name__ == "__main__":
         print(f"An error occurred: {error}")
 
     def perform_command_1(notif):
-        print("Running Command 1!")
+        print("\n\n Running Command 1!")
         response = fcc.get_cast(
             hash="0xcd5082e1110a1ead6acb57bd8ed2e209cef6f892db64be02c3f8cc42247648b7"
         )
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         print(response.cast.text)
 
     def perform_command_2(notif):
-        print("Running Command 2!")
+        print("\n\n Running Command 2!")
         response = fcc.post_cast(
             "Hello World",
             parent=Parent(
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         print(response.cast.text)
 
     def perform_command_3(notif):
-        print("Running Command 3!")
+        print("\n\n Running Command 3!")
         # This command will cause an error to be thrown
         fcc.get_cast(hash="1234567890")
         print("This line will not be printed")
