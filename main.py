@@ -11,20 +11,21 @@ if __name__ == "__main__":
     print(fcc.get_healthcheck())
 
     def handle_command(notif):
+        username = os.getenv("USERNAME")
         # Determine the command to be performed based on the event data
-        if notif.content.cast.text.startswith(os.getenv("USERNAME") + " command_1"):
+        if notif.content.cast.text.startswith(username + " command_1"):
             try:
                 # Perform command 1
                 result = perform_command_1(notif)
             except Exception as e:
                 # Handle any exceptions that occur while performing command 1
                 handle_error(e)
-        if notif.content.cast.text.startswith(os.getenv("USERNAME") + " command_2"):
+        if notif.content.cast.text.startswith(username + " command_2"):
             try:
                 result = perform_command_2(notif)
             except Exception as e:
                 handle_error(e)
-        if notif.content.cast.text.startswith(os.getenv("USERNAME") + " command_3"):
+        if notif.content.cast.text.startswith(username + " command_3"):
             try:
                 result = perform_command_3(notif)
             except Exception as e:
