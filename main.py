@@ -9,9 +9,9 @@ if __name__ == "__main__":
     load_dotenv()
     fcc = MerkleApiClient(access_token=os.getenv("FARC_SECRET"))
     print(fcc.get_healthcheck())
+    username = os.getenv("USERNAME")
 
     def handle_command(notif):
-        username = os.getenv("USERNAME")
         # Determine the command to be performed based on the event data
         if notif.content.cast.text.startswith(username + " command_1"):
             try:
